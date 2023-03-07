@@ -14,12 +14,4 @@ public class FacultyMember extends User {
     public void setDepartment(String department) {
         this.department = department;
     }
-
-    public String getName() {
-        return super.getName();
-    }
-
-    /*void setName(String name) {
-        super.setName(name);
-    }*/
 }

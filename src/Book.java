@@ -1,14 +1,13 @@
 import java.util.List;
 
-public class Book extends Exception {
+public class Book {
     private String title;
     private List<Author> authors;
 
     public Book(String title, List<Author> authors) throws EmptyAuthorListException {
         this.title = title;
         if (authors == null) throw new EmptyAuthorListException("There are no authors in the list");
-
-        this.authors = authors;
+        else this.authors = authors;
     }
 
     public void addAuthor(Author author) {
@@ -18,17 +17,13 @@ public class Book extends Exception {
     public List<Author> getAuthors() throws EmptyAuthorListException {
         if (authors == null) {
             throw new EmptyAuthorListException("There are no authors in the list");
-        }
-
-        return authors;
+        } else return authors;
     }
 
     public void setAuthors(List<Author> authors) throws EmptyAuthorListException {
         if (authors == null) {
             throw new EmptyAuthorListException("There are no authors in the list");
-        }
-
-        this.authors = authors;
+        } else this.authors = authors;
     }
 
     public String getTitle() {
